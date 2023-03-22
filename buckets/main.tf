@@ -4,9 +4,13 @@ provider "aws" {
 
 resource "aws_s3_bucket" "raja-bucket" {
   bucket = "raja"
-  aws_s3_bucket_acl   = "private"
 
   tags = {
-    Name        = "raja"
+    Name = "raja"
   }
+}
+
+resource "aws_s3_bucket_acl" "raja-bucket" {
+  bucket = aws_s3_bucket.raja-bucket.id
+  acl    = "private"
 }
