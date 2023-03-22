@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "raja" {
+resource "aws_s3_bucket" {
   bucket = "raja-bucket"
 
   tags = {
