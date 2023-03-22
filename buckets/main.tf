@@ -9,8 +9,3 @@ resource "aws_s3_bucket" "raja-bucket" {
     Name = "raja"
   }
 }
-
-resource "aws_s3_bucket_acl" "raja-bucket" {
-  bucket = aws_s3_bucket.raja-bucket.id
-  acl    = "private"
-}
