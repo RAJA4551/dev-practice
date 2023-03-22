@@ -2,15 +2,15 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_s3_bucket" "raja-mopati" {
-  bucket = "raja-m"
+resource "aws_s3_bucket" "raja-bucket1" {
+  bucket = "raja1"
 
   tags = {
-    Name = "raja-m"
+    Name = "raja1"
   }
 }
 
-resource "aws_s3_bucket_acl" "raja-mopati" {
-  bucket = aws_s3_bucket.raja-bucket.id
+resource "aws_s3_bucket_acl" "raja-bucket1" {
+  bucket = aws_s3_bucket.raja-bucket1.id
   acl    = "private"
 }
